@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Previsão do Tempo</title>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Previsão do Tempo</h1>
+
+        <p>Digite o nome de uma cidade para consultar o clima atual.</p>
+
+        <section class="busca">
+
+            <input 
+                type="text" 
+                id="cidade" 
+                placeholder="Digite uma cidade"
+            >
+
+            <button id="buscar">
+                Buscar
+            </button>
+
+        </section>
+
+        <section class="resultado">
+
+            <h2 id="nomeCidade">
+                Cidade
+            </h2>
+
+            <p class="temperatura">
+                <span id="temperatura">--</span> °C
+            </p>
+
+            <p>
+                Clima:
+                <span id="descricao">--</span>
+            </p>
+
+            <p>
+                Sensação térmica:
+                <span id="sensacao">--</span> °C
+            </p>
+
+            <p>
+                Umidade:
+                <span id="umidade">--</span>%
+            </p>
+
+            <p>
+                Vento:
+                <span id="vento">--</span> km/h
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Valor Atual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Temperatura</strong></td>
+                        <td id="temp">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sensação Térmica</strong></td>
+                        <td id="feels-like">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Umidade do Ar</strong></td>
+                        <td id="humidity">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Velocidade do Vento</strong></td>
+                        <td id="wind-speed">-</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rajada de Vento</strong></td>
+                        <td id="wind-gust">-</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="scrip.js"></script>
+
+
+<div class="container">
+    <h1>Previsão do Tempo de 5 Dias</h1>
+
+    <!-- Grid que separa cada métrica em um gráfico individual -->
+    <div class="grid-graficos">
+        <div class="card-grafico">
+            <h3>Temperatura (°C)</h3>
+            <canvas id="chartTemperatura"></canvas>
+        </div>
+        <div class="card-grafico">
+            <h3>Condição do Tempo (Índice de Nuvens %)</h3>
+            <canvas id="chartTempo"></canvas>
+        </div>
+        <div class="card-grafico">
+            <h3>Umidade (%)</h3>
+            <canvas id="chartUmidade"></canvas>
+        </div>
+        <div class="card-grafico">
+            <h3>Vento (km/h)</h3>
+            <canvas id="chartVento"></canvas>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
+
